@@ -4,18 +4,17 @@ const loadMoreBtn = document.querySelector('.loadMoreBtn');
 let allRecipes = [];
 let currentPage = 0;
 const recipesPerPage = 10; 
+const maxRecipes = 30; 
 
 function loadRecipes() {
-  
   fetch('https://dummyjson.com/recipes')
     .then(function(response) {
       return response.json();
     })
     .then(function(data) {
-
       allRecipes = data.recipes;
 
-      // Llamamos a la función que mostrará las recetas correspondientes a la página inicial
+    
       displayRecipes();
     })
     .catch(function(error) {
@@ -25,17 +24,16 @@ function loadRecipes() {
 
 // Función para mostrar las recetas correspondientes a la página actual
 function displayRecipes() {
-
   const inicio = currentPage * recipesPerPage;
-  const end = inicio + recipesPerPage; 
+  const fin = inicio + recipesPerPage;
 
-  for (let i = inicio; i < end; i++) {
+  for (let i = inicio; i < fin; i++) {
     if (i < allRecipes.length) {  
       const recipe = allRecipes[i];
       const recipeMarkup = `
         <article>
           <img src="${recipe.image}" alt="${recipe.name}">
-          <p>Título: ${recipe.name}</p>
+          <p><b> ${recipe.name}</b></p>
           <p>Nivel de dificultad: ${recipe.difficulty}</p>
           <a href="receta.html?id=${recipe.id}">Ir al detalle</a>
         </article>`;
@@ -43,12 +41,23 @@ function displayRecipes() {
       recipesList.innerHTML += recipeMarkup; 
     }
   }
+
+  // Ocultar botón si no hay más recetas para cargar
+  if ((currentPage + 1) * recipesPerPage >= maxRecipes || (currentPage + 1) * recipesPerPage >= allRecipes.length) {
+    loadMoreBtn.style.display = 'none';
+  }
 }
 
-// Evento para cargar más recetas al hacer clic en el botón
 loadMoreBtn.addEventListener('click', function() {
   currentPage++; 
   displayRecipes(); 
 });
 
 loadRecipes();
+
+//if ((currentPage + 1) * recipesPerPage >= maxRecipes) {
+// loadMoreBtn.style.display = 'none';
+//} else if ((currentPage + 1) * recipesPerPage >= allRecipes.length) {
+//  loadMoreBtn.style.display = 'none';
+//}
+//}

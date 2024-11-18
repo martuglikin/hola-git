@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Belle Cuccine</title>
+    <title>Detalle Recetas</title>
     <link href="css/styles.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,7 +17,7 @@
             <nav class="navbar">
                 <ul>
                     <li><a href="index.html">HOME</a></li>
-                    <li><a href="categories.html">CATEGORIAS</a></li>
+                    <li><a href="categorias.html">CATEGORIAS</a></li>
                     <li><a href="login.html">LOGIN</a></li>
                     <li><a href="registro.html">REGISTRO</a></li>
                  </ul>
@@ -34,18 +34,25 @@
         </div>
     </header>
 
-
     <main>
 
-        <h1 class="tituloRecetas">Recetas</h1>
-        <section class="recipesList">
+        <h1 class="nombreReceta"></h1>
+        <p class="tiempo"></p>
+        <section id="detalleReceta">
+            
+            <div class="imgReceta"></div>
+
+            <section class="textoReceta">
+                <h3><b>Instrucciones:</b></h3>
+                <ol class="instrucciones"></ol> 
+                <h3><b>Categorías:</b></h3>
+                <ul class="listaCategorias"></ul> 
+
+            </section>
 
         </section>
 
-        <button class="loadMoreBtn">Cargar más</button>
-
     </main>
-
 
     <footer>
         <div class="footer-contenido">
@@ -81,7 +88,8 @@
             </div>
            </div> 
 
-    <script src="js/index.js"></script>     
+    <script src="js/receta.js"></script>
     </footer>
+    
 </body>
 </html>
