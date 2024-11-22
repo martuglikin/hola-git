@@ -337,7 +337,7 @@ body{
 }
 
 .imgReceta img{
-    width: 90%;
+    width: 70%;
     margin-left: 10px;
     margin-top: 10px;
 }
@@ -345,6 +345,7 @@ body{
 .imgReceta{
     justify-content: center;
     align-items: center;
+    width: 70%
 }
 
 .textoReceta{
@@ -375,7 +376,8 @@ body{
     margin-top: 20px;
 }
 
-/* css registro*/
+/* Registro */
+
 .registro{
     display: flex;
     justify-content: center;
@@ -453,8 +455,6 @@ body{
     border-radius: 5px;
     cursor: pointer;
 }
-
-
 
 .link-registro{
     display: block;
