@@ -21,9 +21,9 @@ fetch(`https://dummyjson.com/recipes?limit=${maxRecipes}`)
         const recipeMarkup = 
           `<article>
             <img src="${allRecipes[i].image}" alt="${allRecipes[i].name}">
-            <p><b>${allRecipes[i].name}</b></p>
+            <p class="titleRecipe"><b>${allRecipes[i].name}</b></p>
             <p>Nivel de dificultad: ${allRecipes[i].difficulty}</p>
-            <a href="receta.html?id=${allRecipes[i].id}">Ir al detalle</a>
+            <a class="irDetalle" href="receta.html?id=${allRecipes[i].id}">Ir al detalle</a>
           </article>`;
 
         recipesList.innerHTML += recipeMarkup;
@@ -45,9 +45,9 @@ loadMoreBtn.addEventListener('click', function() {
       const recipeMarkup = 
         `<article>
           <img src="${allRecipes[i].image}" alt="${allRecipes[i].name}">
-          <p><b>${allRecipes[i].name}</b></p>
+          <p class="titleRecipe"><b>${allRecipes[i].name}</b></p>
           <p>Nivel de dificultad: ${allRecipes[i].difficulty}</p>
-          <a href="receta.html?id=${allRecipes[i].id}">Ir al detalle</a>
+          <a class="irDetalle" href="receta.html?id=${allRecipes[i].id}">Ir al detalle</a>
         </article>`;
 
       recipesList.innerHTML += recipeMarkup;
