@@ -3,10 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="css/styles.css" rel="stylesheet"> 
+    <title>Belle Cuccine</title>
+    <link href="css/styles.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Shadows+Into+Light&display=swap" rel="stylesheet">
 </head>
 <body>
+
     <header>
         <div id="contenedor_nav">
             <img class="logo" src="imgs/logo.png">
@@ -31,44 +35,12 @@
         </div>
     </header>
 
-    <main class="registro"> 
-        <div class="container-register"> 
-            <div>
-                <div>
-                    <h2 class="titulo_registro"> Formulario de Registro </h2>
-                    <form method="get" class="register-form" action="login.html">
-
-                        <div class="form-group-registro">
-                            <label for="Email"> Email:  </label>
-                            <input type="email" id="Email" name="Email" class="form-control-registro" autocomplete="email" required> 
-                            <div class="Incorrect-Email"></div>
-                        </div>
-
-                        <div class="form-group-registro">
-                            <label for="Password"> Contraseña:  </label>
-                            <input type="password" id="Password" name="Password" class="form-control-registro" autocomplete="new-password" required> 
-                            <div class="Incorrect-Password"></div>
-                        </div>
-
-                        <div class="form-group-registro2">
-                            <input type="checkbox" id="terms" name="checkbox" class="form-control-registro-input" required> 
-                            <label for="terms"> Acepto los <a href="#"> Terminos y Condiciones</a></label>
-                        </div>
-
-                    
-                    <button type="submit" class="button-register"> Registrarse </button>
-
-                    </form> 
-                    
-                    <a class="link" href="login.html">Ya tengo cuenta</a>
-                </div>
-                
-            </div>
-        </div>
-        
+    <main>
+        <h1>Resultados de búsqueda</h1>
+        <p id="search-term"></p> 
+        <section class="result" id="results-container"></section> 
     </main>
     
-
     <footer>
         <div class="footer-contenido">
             <div class="footer-logo">
@@ -101,9 +73,9 @@
                     </ul>
                 </div>
             </div>
-           </div>     
+           </div> 
+
+    <script src="js/results.js"></script>     
     </footer>
-    
-    <script src="js/registro.js"></script>     
 </body>
 </html>
