@@ -483,3 +483,82 @@ body{
     color: black;
     text-decoration:none;
 }
+/* CATEGORIES*/
+
+.categorias-detalles {
+    box-sizing: border-box;
+    margin: 0 auto; 
+    padding: 0;
+    display: flex; 
+    flex-wrap: wrap;
+    gap: 20px; 
+    width: 80%;
+    max-width: 1200px; 
+    justify-content: center; 
+    align-items: center; 
+}
+.category {
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center;
+    box-sizing: border-box;
+    flex: 25%;  
+}
+.category h2 {
+    font: size 1px;
+    color: #333;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+
+}
+
+.category a {
+    text-decoration: none; 
+    color: inherit; 
+  }
+
+.titulo-categoria{
+    text-align: center; 
+    margin-top: 20px; 
+    font-size: 2; 
+    color: #333; 
+    margin-bottom: 40px;
+  }
+
+  /* CATEGORY*/ 
+
+.category-detail {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center; /* Centra todo el contenido horizontalmente */
+    justify-content: center; /* Centra todo el contenido verticalmente */
+    padding: 20px;
+    margin-top: 50px; /* Espacio arriba */
+  }
+.datallado {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 300px; /* Limita el ancho de las cajas */
+    margin-bottom: 30px; /* Espacio entre los artículos */
+  }
+.datallado img {
+    width: 100%; /* La imagen ocupa el 100% del contenedor */
+    max-width: 250px; /* Limita el tamaño máximo de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 8px; /* Bordes redondeados para la imagen */
+    margin-bottom: 15px; /* Espacio entre la imagen y el título */
+  }
+.datallado h2 {
+    font-size: 1.6rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  

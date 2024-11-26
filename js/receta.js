@@ -35,10 +35,10 @@ fetch(`https://dummyjson.com/recipes/${id}`)
 
     // Crear la lista de categorías dinámicamente
     if (data.tags && data.tags.length > 0) {
-      listaCategorias.innerHTML = '';
+      listaCategorias.innerHTML = " ";
       let categoriasHTML = ''; 
       for (let i = 0; i < data.tags.length; i++) {
-        categoriasHTML += `<li><a href="categoria.html?name=${data.tags[i]}">${data.tags[i]}</a></li>`;
+        categoriasHTML += `<li><a href="category.html?categoria=${data.tags[i]}">${data.tags[i]}</a></li>`;
       }
       listaCategorias.innerHTML = categoriasHTML; 
     }

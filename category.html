@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Belle Cuccine</title>
     <link href="css/styles.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Shadows+Into+Light&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -21,45 +24,17 @@
 
             <section class="search-container">
 
-                <form class="buscador" action="./results.html" method="get">
-                    <input class="b" type="text" name="q" placeholder="Buscar">
+                <form class="buscador" action="results.html" method="get">
+                    <input type="text" name="q" placeholder="Buscar">
                     <button class="btn" type="submit"><img src="imgs/search.png"></button>
-                    <div class="invalid-feedback"></div>
                 </form>
         
             </section>
         </div>
     </header>
-   
-
-    <main class="login">
-        <div class="container">
-            <div>
-                <div>
-                    <h2 class="titulo_login">Login</h2>
-                    <form class="log" method="get" class="contact-form" action="index.html">
-                        
-                        <div class="form-group">
-                            <label for="email">Email:</label>
-                            <input type="email" name="email" id="email" class="form-control">
-                            <div class="invalid-feedback email"></div>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="password">Contraseña:</label>
-                            <input type="password" name="password" id="password" class="form-control">
-                            <div class="invalid-feedback password"></div>
-                        </div>
-                        
-                        <button type="submit" class="boton">ENVIAR</button>
-                    </form>
-    
-                    <a class="link" href="registro.html">No tengo cuenta</a>
-                </div>
-            </div>
-        </div>
+    <main>
+        <section class="category-detail"></section>
     </main>
-    
     <footer>
         <div class="footer-contenido">
             <div class="footer-logo">
@@ -93,13 +68,9 @@
                 </div>
             </div>
            </div> 
+
+    <script src="js/category.js"></script>     
     </footer>
-
-
-
-    <script src="js/login.js"></script>   
-  
     
 </body>
 </html>
-
