@@ -1,8 +1,6 @@
-
 const queryString = location.search;
 const queryStringObj = new URLSearchParams(queryString);
 const id = queryStringObj.get('id');
-
 
 const nombreReceta = document.querySelector('.nombreReceta');
 const instruccionesList = document.querySelector('.instrucciones'); 
@@ -10,19 +8,16 @@ const tiempo = document.querySelector('.tiempo');
 const imgReceta = document.querySelector('.imgReceta');
 const listaCategorias = document.querySelector('.listaCategorias');
 
-
 fetch(`https://dummyjson.com/recipes/${id}`)
   .then(function (response) {
     return response.json();
   })
   .then(function (data) {
     console.log(data);
-
     
     nombreReceta.innerText = data.name;
     tiempo.innerText = `Tiempo de Cocción: ${data.cookTimeMinutes} minutos`;
     imgReceta.innerHTML = `<img src="${data.image}" alt="${data.name}">`;
-
 
     if (data.instructions && data.instructions.length > 0) {
       instruccionesList.innerHTML = '';
@@ -46,7 +41,7 @@ fetch(`https://dummyjson.com/recipes/${id}`)
     console.log('Error al obtener los datos de la receta:', error);
   });
 
-  const busqueda = document.querySelector('.b');
+const busqueda = document.querySelector('.b');
 const invalidFeedback = document.querySelector('.invalid-feedback');
 const formulario = document.querySelector('.buscador');
 

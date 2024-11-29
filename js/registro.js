@@ -1,11 +1,8 @@
-
 const form = document.querySelector('.form');
-
 
 const FullName = document.querySelector("#NombreCompleto");
 const email = document.querySelector('#email');
 const password = document.querySelector('#password');
-
 
 const InvalidFullName = document.querySelector('.NombreCompleto');
 const InvalidEmail = document.querySelector('.email');
@@ -14,7 +11,6 @@ const InvalidPassword = document.querySelector('.password');
 const MensajeIncompleto = 'Por favor complete el campo';
 
 let erroresBool = false;
-
 
 form.addEventListener('submit', function(event){
     event.preventDefault();

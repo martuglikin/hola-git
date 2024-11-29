@@ -1,13 +1,10 @@
 const form = document.querySelector('.log')
 
-
 const email = document.getElementById('email')
 const contrasena = document.getElementById('contrasena')
 
 const invalidEmail = document.querySelector('.email')
 const invalidPassword = document.querySelector('.password')
-
-
 
 form.addEventListener('submit', function(event){
     event.preventDefault();
