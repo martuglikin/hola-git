@@ -6,7 +6,7 @@ if (tipoCategoria) {
   const titleCategory = document.querySelector('.title-category');
   titleCategory.innerHTML = `<h1>Resultados para la categoría: "${tipoCategoria}"</h1>`;
   
-  fetch(`https://dummyjson.com/recipes/search?q=${tipoCategoria}`)
+fetch(`https://dummyjson.com/recipes/tag/${tipoCategoria}`)
     .then(function(response) {
       return response.json();
     })
