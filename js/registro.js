@@ -1,39 +1,55 @@
-//Formulario
-const form = document.querySelector('form');
 
-//Campos
-const email = document.getElementById('email');
-const password = document.getElementById('password');
+const form = document.querySelector('.form');
 
-//Invalid Texts
+
+const FullName = document.querySelector("#NombreCompleto");
+const email = document.querySelector('#email');
+const password = document.querySelector('#password');
+
+
+const InvalidFullName = document.querySelector('.NombreCompleto');
 const InvalidEmail = document.querySelector('.email');
 const InvalidPassword = document.querySelector('.password');
 
-// Crear event listener submit para el form
+const MensajeIncompleto = 'Por favor complete el campo';
+
+let erroresBool = false;
+
 
 form.addEventListener('submit', function(event){
     event.preventDefault();
-    let errors = false;
-
-    if(email.value === ""){
-        InvalidEmail.innerText = "Por favor complete el campo";
-        InvalidEmail.style.display = "block";
-        errors = true;
+    erroresBool = false;  
+     
+     if(FullName.value == ""){
+      InvalidFullName.style.display = "block";
+      InvalidFullName.innerText = MensajeIncompleto;
+      erroresBool = true;
     }else{
-        InvalidEmail.style.display = "none";
+      InvalidFullName.style.display = 'none';
     }
 
-    if(password.value === ""){
-        InvalidPassword.innerText = "Por favor complete el campo";
-        InvalidPassword.style.display = "block";
-        errors = true;
+    
+    if(email.value == ""){
+      InvalidEmail.style.display = "block";
+      InvalidEmail.innerText = MensajeIncompleto;
+      erroresBool = true;
     }else{
-        InvalidPassword.style.display = "none";
+      InvalidEmail.style.display = "none";
+    } 
+
+    
+    if(password.value == ""){
+      InvalidPassword.style.display = "block";
+      InvalidPassword.innerText = MensajeIncompleto;
+      erroresBool = true;
+    }else{
+      InvalidPassword.style.display = "none";
     }
 
-    if(!errors){
-        this.submit();
-    }
+    
+    if(erroresBool == false){
+      this.submit();
+  }
 });
 
 const busqueda = document.querySelector('.b');

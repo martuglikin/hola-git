@@ -4,7 +4,7 @@ const loadMoreBtn = document.querySelector('.loadMoreBtn');
 let allRecipes = [];
 let currentPage = 0;
 const recipesPerPage = 10; 
-const maxRecipes = 30; // Número máximo de recetas disponibles
+const maxRecipes = 30; 
 
 fetch(`https://dummyjson.com/recipes?limit=${maxRecipes}`)
   .then(function(response) {
@@ -13,7 +13,7 @@ fetch(`https://dummyjson.com/recipes?limit=${maxRecipes}`)
   .then(function(data) {
     allRecipes = data.recipes; 
 
-    let count = 0; // Contador para recetas mostradas en esta página
+    let count = 0; 
 
     for (let i = 0; i < allRecipes.length; i++) {
       if (i >= currentPage * recipesPerPage && count < recipesPerPage) {
@@ -36,7 +36,7 @@ fetch(`https://dummyjson.com/recipes?limit=${maxRecipes}`)
   });
 
 loadMoreBtn.addEventListener('click', function() {
-  currentPage++; // Incrementamos la página asi se muestra de la receta 10 para arriba (ahora es la pag 1, desp pasa a la pag 2)
+  currentPage++; 
   
   let count = 0; 
 
@@ -55,19 +55,12 @@ loadMoreBtn.addEventListener('click', function() {
     }
   }
 
-  // Ocultar botón si ya no hay más recetas
+ 
   if ((currentPage + 1) * recipesPerPage >= maxRecipes || (currentPage + 1) * recipesPerPage >= allRecipes.length) {
     loadMoreBtn.style.display = 'none';
   }
 });
 
-
-//if ((currentPage + 1) * recipesPerPage >= maxRecipes) {
-// loadMoreBtn.style.display = 'none';
-//} else if ((currentPage + 1) * recipesPerPage >= allRecipes.length) {
-//  loadMoreBtn.style.display = 'none';
-//}
-//}
 
 const busqueda = document.querySelector('.b');
 const invalidFeedback = document.querySelector('.invalid-feedback');

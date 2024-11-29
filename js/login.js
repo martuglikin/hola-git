@@ -1,16 +1,14 @@
 const form = document.querySelector('.log')
 
-//Campos
 
 const email = document.getElementById('email')
 const contrasena = document.getElementById('contrasena')
 
-//Invalid texts
 const invalidEmail = document.querySelector('.email')
 const invalidPassword = document.querySelector('.password')
 
 
-//Crear event listener submit para el form
+
 form.addEventListener('submit', function(event){
     event.preventDefault();
     let error= false;
