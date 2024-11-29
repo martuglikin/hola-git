@@ -4,12 +4,13 @@ const queryStringObj = new URLSearchParams(queryString);
 const id = queryStringObj.get('q'); // Obtener el valor de "q"
 
 const resultado = document.querySelector('.result');
+const resultTitle = document.querySelector('.result-title');
 let allRecipes = [];
 
 // Mostrar mensaje de búsqueda
 // Mostrar mensaje de búsqueda usando innerHTML
 if (id) {
-  resultado.innerHTML = `<h2>Resultados de búsqueda para: "${id}"</h2>`;
+  resultTitle.innerHTML = `<h2 class="resultadoNom">Resultados de búsqueda para: "${id}"</h2>`;
 } 
 
 

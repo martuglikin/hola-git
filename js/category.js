@@ -3,6 +3,9 @@ const queryParams = new URLSearchParams(queryString);
 const tipoCategoria = queryParams.get('categoria'); 
 
 if (tipoCategoria) {
+  const titleCategory = document.querySelector('.title-category');
+  titleCategory.innerHTML = `<h1>Resultados para la categoría: "${tipoCategoria}"</h1>`;
+  
   fetch(`https://dummyjson.com/recipes/search?q=${tipoCategoria}`)
     .then(function(response) {
       return response.json();

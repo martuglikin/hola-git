@@ -483,20 +483,21 @@ body{
     color: black;
     text-decoration:none;
 }
-/* CATEGORIES*/
+
+/* Categorias*/
 
 .categorias-detalles {
-    box-sizing: border-box;
     margin: 0 auto; 
     padding: 0;
     display: flex; 
     flex-wrap: wrap;
     gap: 20px; 
     width: 80%;
-    max-width: 1200px; 
     justify-content: center; 
-    align-items: center; 
+    align-items: center;
+    font-family: "Inter", sans-serif; 
 }
+
 .category {
     border-radius: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -506,59 +507,270 @@ body{
     flex-direction: column; 
     align-items: center; 
     justify-content: center;
-    box-sizing: border-box;
-    flex: 25%;  
+    flex: 25%; 
+    font-family: "Inter", sans-serif; 
+    border: 1px solid rgb(24, 24, 24);
+    background-color: #d7d1c6;
 }
+
+.category:hover{
+    background-color: #bbb6ae;
+}
+
 .category h2 {
-    font: size 1px;
+    font-size: 18px;
     color: #333;
     text-transform: uppercase;
     margin-bottom: 15px;
-
 }
 
 .category a {
     text-decoration: none; 
-    color: inherit; 
-  }
+    color: black;  
+}
 
 .titulo-categoria{
     text-align: center; 
     margin-top: 20px; 
-    font-size: 2; 
-    color: #333; 
+    color: rgb(24, 24, 24); 
     margin-bottom: 40px;
-  }
+    font-family: "Inter", sans-serif;
+}
 
-  /* CATEGORY*/ 
+/* Categoria */ 
 
 .category-detail {
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center; /* Centra todo el contenido horizontalmente */
-    justify-content: center; /* Centra todo el contenido verticalmente */
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 20px; 
     padding: 20px;
-    margin-top: 50px; /* Espacio arriba */
-  }
+}
+
 .datallado {
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    width: 18%; 
+    min-width: 200px; 
+    border: 1px solid rgb(24, 24, 24);
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 2px 5px 9px rgba(0, 0, 0, 0.1);
     text-align: center;
-    width: 300px; /* Limita el ancho de las cajas */
-    margin-bottom: 30px; /* Espacio entre los artículos */
-  }
+    background-color: #cac4b9;
+    font-family: "Inter", sans-serif;
+    font-size: 13px;
+}
+
 .datallado img {
-    width: 100%; /* La imagen ocupa el 100% del contenedor */
-    max-width: 250px; /* Limita el tamaño máximo de la imagen */
-    height: auto; /* Mantiene la proporción de la imagen */
-    border-radius: 8px; /* Bordes redondeados para la imagen */
-    margin-bottom: 15px; /* Espacio entre la imagen y el título */
-  }
-.datallado h2 {
-    font-size: 1.6rem;
-    color: #333;
-    margin-bottom: 10px;
-  }
+    width: 100%; 
+    height: auto;
+    border-radius: 4px;
+}
+
+.title-category{
+    color: rgb(24, 24, 24);
+    margin-left: 20px;
+    font-family: "Inter", sans-serif;
+    margin-top: 20px;
+}
+
+/* Resultados */
+
+.result {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 20px; 
+    padding: 20px;
+}
+
+.result article {
+    width: 18%; 
+    min-width: 200px; 
+    border: 1px solid rgb(24, 24, 24);
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 2px 5px 9px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    background-color: #cac4b9;
+    font-family: "Inter", sans-serif;
+    font-size: 13px;
+}
   
+.result img {
+    width: 100%; 
+    height: auto;
+    border-radius: 4px;
+}
+
+.tituloResult{
+    color: rgb(24, 24, 24);
+    margin-left: 20px;
+    font-family: "Inter", sans-serif;
+    margin-top: 20px;
+}
+
+.result-title h2{
+    color: rgb(24, 24, 24);
+    margin-left: 20px;
+    font-family: "Inter", sans-serif;
+    margin-top: 20px;
+}
+
+/* Responsive */
+
+@media (max-width: 640px) {
+    /* Header */
+    #contenedor_nav {
+        flex-direction: column; 
+        align-items: center;
+        padding: 10px;
+    }
+    
+    .logo {
+        width: 40%; 
+        margin: 0 auto; 
+    }
+    
+    .navbar {
+        flex-direction: column; 
+        align-items: center; 
+        justify-content: center;
+        margin: 10px 0;
+    }
+    
+    .navbar ul {
+        flex-direction: column; 
+        width: auto;
+        align-items: center;
+    }
+    
+    .navbar ul li {
+        margin: 5px 0;
+        text-align: center; 
+    }
+    
+    .navbar ul li a {
+        font-size: 12px;
+        padding: 10px;
+        text-align: center; 
+    }
+    
+    .buscador input {
+        width: 180px; 
+        height: 30px;
+        font-size: 14px;
+    }
+    
+    .btn img {
+        width: 12px; 
+    }
+  
+    /* Recipes List */
+    .recipesList {
+      flex-direction: column;
+      gap: 10px;
+      padding: 10px;
+    }
+  
+    .recipesList article {
+      width: 100%;
+    }
+  
+    .tituloRecetas {
+      margin-left: 0;
+      text-align: center;
+    }
+  
+    /* Footer */
+    .footer-contenido {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  
+    .footer-links {
+      flex-direction: column;
+      width: 100%;
+      align-items: center;
+    }
+  
+    .footer-separator {
+      display: none;
+    }
+  
+    /* Login & Register */
+    .login {
+      height: auto;
+      padding: 20px;
+    }
+
+    .registro {
+        height: auto;
+        padding: 20px;
+    } 
+  
+    .container {
+      width: 90%;
+    }
+
+    .container-register {
+        width: 90%;
+    }
+  
+    /* Categorias */
+    .categorias-detalles {
+      flex-direction: column;
+      width: 100%;
+    }
+  
+    .category {
+      width: 90%;
+    }
+  
+    /* Detalle Recetas */
+    #detalleReceta {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .imgReceta {
+      width: 90%;
+      height: auto;
+    }
+  
+    .textoReceta {
+      margin: 20px;
+    }
+  
+    .listaCategorias {
+      margin-left: 0;
+      text-align: left;
+      list-style-type: none;
+    }
+
+    /* Detalle Cateogria*/
+
+    .category-detail{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .datallado{
+        width: 100%;
+    }
+
+    /* Resultado */
+
+    .result{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .result article{
+        width: 100%;
+    }
+
+  }
+
+
